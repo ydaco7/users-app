@@ -6,6 +6,7 @@ from routes.user_name_and_email_search import user_bp
 from routes.user_delete import user_delete
 from routes.user_add import user_add
 from routes.name_search import name_search
+from routes.user_modify import user_modify_bp
 
 
 app = Flask(__name__)
@@ -17,6 +18,7 @@ app.register_blueprint(user_bp, url_prefix='/api')
 app.register_blueprint(user_delete, url_prefix='/delete')
 app.register_blueprint(user_add, url_prefix='/user') 
 app.register_blueprint(name_search, url_prefix='/search')
+app.register_blueprint(user_modify_bp, url_prefix='/modify')
 
 
 @app.route('/')

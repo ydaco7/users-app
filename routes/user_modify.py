@@ -1,5 +1,8 @@
 from flask import Blueprint, request, jsonify
 from mock import usuarios
+import sys
+import os 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 user_modify_bp = Blueprint('user_modify_bp', __name__)
 
